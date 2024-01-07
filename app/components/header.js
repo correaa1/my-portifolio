@@ -1,9 +1,11 @@
 import React from 'react';
-import {Avatar, Button, Container, Grid, Wrap} from "@chakra-ui/react";
+import {Avatar, Button, Container, Grid, Icon, Wrap, Box} from "@chakra-ui/react";
 import Link from "next/link";
 import PageTransition from "@/app/components/pageTransition";
+import {FaGithub, FaLinkedin} from "react-icons/fa";
 
 const Header = () => {
+
     return (
 
             <Grid
@@ -17,9 +19,18 @@ const Header = () => {
                         h={930}
                         px={10}
                       >
-                <Grid   display='flex' justifyContent='center' alignItems='center'  >
+                <Grid   display='flex' flexDir='column' justifyContent='center' alignItems='center'  >
                     <Avatar size="2xl" name="Bruno Correa" src="/my.jpg" />
+                     <Box pt={10}>
+                         <Link href='https://github.com/correaa1' target="_blank" >
+                             <Icon m={3} w={50} h={50} as={FaGithub}/>
+                         </Link>
+                         <Link href='https://www.linkedin.com/in/devbrunocorrea1/' target="_blank">
+                        <Icon m={3} w={50} h={50} as={FaLinkedin }/>
+                         </Link>
+                     </Box>
                 </Grid>
+
                 <Container w={"100%"}>
                     <Wrap w={"100%"} pt={5}>
                         <Link href='/home'> <Button w={250} colorScheme="gray">

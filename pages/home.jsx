@@ -1,9 +1,10 @@
 
 
-import { Box, Flex} from "@chakra-ui/react";
+import {Box, Container, Flex, Icon} from "@chakra-ui/react";
 import React from "react";
 import Background from "@/app/components/particles";
 import Header from "@/app/components/header";
+import {FaGithub, FaLinkedin} from "react-icons/fa";
 
 function IndexPage() {
     return (
@@ -12,6 +13,7 @@ function IndexPage() {
               <Box  >
                 <Background  />
               </Box>
+
         </Flex>
     );
 }

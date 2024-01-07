@@ -27,7 +27,7 @@ const Background = () => {
             />
 
             <Text
-                position={[0, 0, 0]}
+                position={[0, 1, 0]}
                 scale={[1, 1, 1]}
                 color="white"
                 anchorX="center"
@@ -38,14 +38,14 @@ const Background = () => {
             </Text>
 
             <Text
-                position={[0, -1, 0]}
+                position={[0, 0, 0]}
                 scale={[1, 1, 1]}
                 color="white"
                 anchorX="center"
                 anchorY="middle"
                 fontSize={0.5}
             >
-                trabalho como desenvolvedor web freelancer
+                e sou desenvolvedor web freelancer
             </Text>
             <ambientLight intensity={0.4} />
             <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
