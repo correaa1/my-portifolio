@@ -24,7 +24,7 @@ const About = () => {
             <Header/>
                 <PageTransition>
             <Flex bg='#131325' flexDirection='column' ps={20} w={1500} h={1200}>
-                        <Text  fontSize='4xl'  p={10} >
+                        <Text   fontSize='4xl'  p={10} >
                     Sobre mim
                         </Text>
                 < Flex flexDirection='row'   >
@@ -33,13 +33,13 @@ const About = () => {
                         <Text  fontSize='lg'  p={10} >
                           Meu nome é Bruno Correa, gosto muito de tecnologia e busco sempre estar aprendendo e inovando cada vez mais.
                         </Text>
-                        <Text fontSize='lg' p={10}>
+                        <Text  fontSize='lg' p={10}>
                          Apaixonado pelo ecossistema React/Next.js e venho buscando trabalhar com essas tecnologias frequentemente
                         </Text>
                      </Grid>
                 </Flex>
                 <Center  m={20}>
-                    <Button bg='gray.700' _hover={{bg:'gray.600'}} onClick={handleDownload} >
+                    <Button color='white' bg='gray.700' _hover={{bg:'gray.600'}} onClick={handleDownload} >
                     Download curriculo
                 </Button>
                 </Center>
@@ -50,25 +50,25 @@ const About = () => {
                         transition={{duration: 0.5}}
                     >
                         <Box pt={20}>
-                        <Text fontSize='4xl' p={10}>
+                        <Text  fontSize='4xl' p={10}>
                             Serviços que ofereço
                         </Text>
                     </Box>
                         <Wrap>
                             <Box display='flex' justifyContent='center' alignItems='center' m={5} w={350} h={150}
-                                 bg='gray' borderRadius="md"
+                                 bg='gray.800' borderRadius="md"
                                  boxShadow="md">
                                 <Text justifyContent='center' alignItems='center' textAlign='center' p={5}
                                       fontSize='lg'> Desenvolvimento web</Text>
 
                             </Box>
                             <Box display='flex' justifyContent='center' alignItems='center' m={5} w={350} h={150}
-                                 bg='gray' borderRadius="md"
+                                 bg='gray.800' borderRadius="md"
                                  boxShadow="md">
                                 <Text textAlign='center' p={5} fontSize='lg'> Serviços Aws Amazon</Text>
                             </Box>
                             <Box display='flex' justifyContent='center' alignItems='center' m={5} w={350} h={150}
-                                 bg='gray' borderRadius="md"
+                                 bg='gray.800' borderRadius="md"
                                  boxShadow="md">
                                 <Text textAlign='center' p={5} fontSize='lg'> Deploy da aplicação</Text>
                             </Box>

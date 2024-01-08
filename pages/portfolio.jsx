@@ -1,10 +1,12 @@
 import React from 'react';
-import {Box, Container, Flex, Grid, Text, Wrap} from "@chakra-ui/react";
+import {Box, Button, Container, Flex, Grid, Image, Text, Wrap} from "@chakra-ui/react";
 import Header from "@/app/components/header";
 import SkillItem from "@/app/components/skillItems";
-import { motion } from 'framer-motion';
 import PageTransition from "@/app/components/pageTransition";
-import PortfolioItem from "@/app/components/boxMotion";
+import { motion } from "framer-motion";
+import Link from "next/link";
+
+const AnimatedBox = motion(Box);
 
 const skills = [
     { name: 'React', level: 'Avançado' },
@@ -26,10 +28,7 @@ const library = [
     { name: 'Jscookie', level: 'Basico' },
     { name: 'react three fiber', level: 'Basico' },
 ];
-const portfolioItems = [
-    { title: 'Autism Project' },
-    { title: 'Ahlib' },
-];
+
 
 const Portfolio = () => {
 
@@ -46,10 +45,21 @@ const Portfolio = () => {
                     exit={{opacity: 0, y: 20}}
                     transition={{duration: 0.5}}
                 >
-                    <Wrap mx={20} >
-                          {portfolioItems.map((item, index) => (
-                            <PortfolioItem key={index} title={item.title}/>
-                        ))}
+                    <Wrap  mx={20} >
+                        <AnimatedBox  whileHover={{ scale: 1.05 }}
+                                      whileTap={{ scale: 0.95 }}  >
+                            <Text fontSize='2xl' textAlign='center' pb={5}>Autism Project</Text>
+                         <Link href='https://github.com/correaa1/AutismProject' target='_blank'>
+                             <Image backgroundColor='gray.500' p={10} border='1px solid gray' borderRadius={10} h={300} w={400}  src='/Autism.png'/>
+                         </Link>
+
+                        </AnimatedBox>
+                         <AnimatedBox  whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }} mx={20}  >
+                            <Text fontSize='2xl' textAlign='center' pb={5}>Ahlib Mobile</Text>
+                        <Link href='https://github.com/AhgoraLabs/AhLib-mobile' target='_blank'>    <Image  h={300} w={400}  src='/ahlib.png'/></Link>
+
+                        </AnimatedBox>
                     </Wrap>
 
 

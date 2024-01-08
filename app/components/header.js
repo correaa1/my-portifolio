@@ -41,7 +41,7 @@ const Header = () => {
 
                     <Wrap w={"100%"} pt={5}>
                         <Link href='/about'>
-                            <Button w={250} bg='gray.700' _hover={{bg:'gray.600'}}>
+                            <Button w={250} color='white' bg='gray.700' _hover={{bg:'gray.600'}}>
                             Sobre
                         </Button>
                         </Link>

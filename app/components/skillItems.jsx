@@ -11,7 +11,7 @@ const SkillItem = ({ name, level }) => {
             whileTap={{ scale: 0.95 }}
         >
             <Box
-                bg="gray"
+                bg="gray.800"
                 borderRadius="md"
                 boxShadow="md"
                 m={2}
