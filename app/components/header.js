@@ -33,7 +33,7 @@ const Header = () => {
                 <Container w={"100%"}>
                     <Wrap w={"100%"} pt={5}>
                         <Link href='/'>
-                            <Button w={250} bg='gray.700' _hover={{bg:'gray.600'}} >
+                            <Button color='white' w={250} bg='gray.700' _hover={{bg:'gray.600'}} >
                             Inicio
                         </Button>
                         </Link>
@@ -49,7 +49,7 @@ const Header = () => {
 
                     <Wrap w={"100%"} pt={5}>
                         <Link href='/portfolio'>
-                            <Button w={250} bg='gray.700' _hover={{bg:'gray.600'}}>
+                            <Button color='white' w={250} bg='gray.700' _hover={{bg:'gray.600'}}>
                             Portfolio
                         </Button>
                         </Link>
