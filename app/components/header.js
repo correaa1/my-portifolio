@@ -32,14 +32,16 @@ const Header = () => {
 
                 <Container w={"100%"}>
                     <Wrap w={"100%"} pt={5}>
-                        <Link href='/'> <Button w={250} colorScheme="gray">
+                        <Link href='/'>
+                            <Button w={250} bg='gray.700' _hover={{bg:'gray.600'}} >
                             Inicio
                         </Button>
                         </Link>
                     </Wrap>
 
                     <Wrap w={"100%"} pt={5}>
-                        <Link href='/about'> <Button w={250} colorScheme="gray">
+                        <Link href='/about'>
+                            <Button w={250} bg='gray.700' _hover={{bg:'gray.600'}}>
                             Sobre
                         </Button>
                         </Link>
@@ -47,7 +49,7 @@ const Header = () => {
 
                     <Wrap w={"100%"} pt={5}>
                         <Link href='/portfolio'>
-                            <Button w={250} colorScheme="gray">
+                            <Button w={250} bg='gray.700' _hover={{bg:'gray.600'}}>
                             Portfolio
                         </Button>
                         </Link>

@@ -28,9 +28,7 @@ const library = [
 ];
 const portfolioItems = [
     { title: 'Autism Project' },
-    { title: 'Another Project' },
-    { title: 'Another Project' },
-    // Adicione mais itens conforme necessário
+    { title: 'Ahlib' },
 ];
 
 const Portfolio = () => {
@@ -49,7 +47,7 @@ const Portfolio = () => {
                     transition={{duration: 0.5}}
                 >
                     <Wrap mx={20} >
-                        {portfolioItems.map((item, index) => (
+                          {portfolioItems.map((item, index) => (
                             <PortfolioItem key={index} title={item.title}/>
                         ))}
                     </Wrap>

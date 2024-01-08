@@ -12,7 +12,7 @@ const PortfolioItem = ({ title }) => {
             m={2}
             p={10}
             w={400}
-            h={250}
+            h={200}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
         >

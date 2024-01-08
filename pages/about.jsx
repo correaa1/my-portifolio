@@ -30,16 +30,16 @@ const About = () => {
                 < Flex flexDirection='row'   >
                     <Image h={350} w={550} src='/my.jpg' />
                     <Grid>
-                        <Text  fontSize='2xl'  p={10} >
+                        <Text  fontSize='lg'  p={10} >
                           Meu nome é Bruno Correa, gosto muito de tecnologia e busco sempre estar aprendendo e inovando cada vez mais.
                         </Text>
-                        <Text fontSize='2xl' p={10}>
+                        <Text fontSize='lg' p={10}>
                          Apaixonado pelo ecossistema React/Next.js e venho buscando trabalhar com essas tecnologias frequentemente
                         </Text>
                      </Grid>
                 </Flex>
                 <Center  m={20}>
-                    <Button  onClick={handleDownload} >
+                    <Button bg='gray.700' _hover={{bg:'gray.600'}} onClick={handleDownload} >
                     Download curriculo
                 </Button>
                 </Center>
@@ -59,18 +59,18 @@ const About = () => {
                                  bg='gray' borderRadius="md"
                                  boxShadow="md">
                                 <Text justifyContent='center' alignItems='center' textAlign='center' p={5}
-                                      fontSize='2xl'> Desenvolvimento web</Text>
+                                      fontSize='lg'> Desenvolvimento web</Text>
 
                             </Box>
                             <Box display='flex' justifyContent='center' alignItems='center' m={5} w={350} h={150}
                                  bg='gray' borderRadius="md"
                                  boxShadow="md">
-                                <Text textAlign='center' p={5} fontSize='2xl'> Serviços Aws Amazon</Text>
+                                <Text textAlign='center' p={5} fontSize='lg'> Serviços Aws Amazon</Text>
                             </Box>
                             <Box display='flex' justifyContent='center' alignItems='center' m={5} w={350} h={150}
                                  bg='gray' borderRadius="md"
                                  boxShadow="md">
-                                <Text textAlign='center' p={5} fontSize='2xl'> Deploy da aplicação</Text>
+                                <Text textAlign='center' p={5} fontSize='lg'> Deploy da aplicação</Text>
                             </Box>
                         </Wrap>
                     </motion.div>

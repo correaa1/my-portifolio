@@ -7,6 +7,7 @@ const theme = extendTheme({
                 bg: 'gray.800', // ou qualquer cor que você deseje
                 color: 'white',
             },
+
         },
     },
 });
