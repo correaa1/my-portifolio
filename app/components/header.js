@@ -9,10 +9,9 @@ const Header = () => {
     return (
 
             <Grid
-                bg='ford blue'
                       borderRadius={5}
-                      border='1px solid #323c62'
-                      position="sticky" // Alterado para sticky
+                      border='2px solid #36455c'
+                      position="sticky"
                       top="0"
                       left="0"
                       zIndex="999"
@@ -33,7 +32,7 @@ const Header = () => {
 
                 <Container w={"100%"}>
                     <Wrap w={"100%"} pt={5}>
-                        <Link href='/pages'> <Button w={250} colorScheme="gray">
+                        <Link href='/'> <Button w={250} colorScheme="gray">
                             Inicio
                         </Button>
                         </Link>
