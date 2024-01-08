@@ -33,10 +33,12 @@ const library = [
 const Portfolio = () => {
 
     return (
-    <Flex >
-        <Header/>
+    <Flex  flexDirection={{base:'column', md:'row'}} >
+
+            <Header   />
+
     <PageTransition>
-        <Flex bg='#131325' pt={20} justifyItems='center' flexDirection='column'>
+        <Flex   bg='#131325' pt={20} justifyItems='center' flexDirection='column' minW="93.75em" >
             <Text p={20} fontSize='4xl'>Portfólio</Text>
 
                 <motion.div
@@ -57,7 +59,7 @@ const Portfolio = () => {
                          <AnimatedBox  whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }} mx={20}  >
                             <Text fontSize='2xl' textAlign='center' pb={5}>Ahlib Mobile</Text>
-                        <Link href='https://github.com/AhgoraLabs/AhLib-mobile' target='_blank'>    <Image  h={300} w={400}  src='/ahlib.png'/></Link>
+                        <Link href='https://github.com/AhgoraLabs/AhLib-mobile' target='_blank' >    <Image  h={300} w={400}  src='/ahlib.png'/></Link>
 
                         </AnimatedBox>
                     </Wrap>

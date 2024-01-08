@@ -7,9 +7,9 @@ import Header from "@/app/components/header";
 
 function IndexPage() {
     return (
-         <Flex>
-            <Header/>
-              <Box  >
+         <Flex >
+          <Header/>
+              <Box  display={{base:'none',md: "block", }}   >
                 <Background  />
               </Box>
 

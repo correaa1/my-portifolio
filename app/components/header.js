@@ -1,5 +1,5 @@
 import React from 'react';
-import {Avatar, Button, Container, Grid, Icon, Wrap, Box} from "@chakra-ui/react";
+import {Avatar, Button, Container, Grid, Icon, Wrap, Box, Center} from "@chakra-ui/react";
 import Link from "next/link";
 import PageTransition from "@/app/components/pageTransition";
 import {FaGithub, FaLinkedin} from "react-icons/fa";
@@ -8,17 +8,21 @@ const Header = () => {
 
     return (
 
-            <Grid
-                      borderRadius={5}
-                      border='2px solid #36455c'
-                      position="sticky"
-                      top="0"
-                      left="0"
-                      zIndex="999"
-                        h={930}
-                        px={10}
-                      >
-                <Grid   display='flex' flexDir='column' justifyContent='center' alignItems='center'  >
+        <Grid
+            borderRadius={5}
+            border='2px solid #36455c'
+            position="relative"
+            top="0"
+            left="0"
+            zIndex="999"
+            h={920}
+            minH={{ md:'90em'}}
+            maxH={{base:'35em', }}
+            px={10}
+            w={{base:'93.75em', md:'block'}}
+
+        >
+                <Grid    display='flex' flexDir='column' justifyContent='center' alignItems='center'  >
                     <Avatar size="2xl" name="Bruno Correa" src="/my.jpg" />
                      <Box pt={10}>
                          <Link href='https://github.com/correaa1' target="_blank" >
@@ -30,16 +34,16 @@ const Header = () => {
                      </Box>
                 </Grid>
 
-                <Container w={"100%"}>
-                    <Wrap w={"100%"} pt={5}>
+                <Center position={{base:'none', md:'relative'}} top={  {base:'none', md:'-500px'}} flexDirection='column'  w={"100%"}>
+                    <Wrap  pt={5}>
                         <Link href='/'>
-                            <Button color='white' w={250} bg='gray.700' _hover={{bg:'gray.600'}} >
+                            <Button   color='white' w={250} bg='gray.700' _hover={{bg:'gray.600'}} >
                             Inicio
                         </Button>
                         </Link>
                     </Wrap>
 
-                    <Wrap w={"100%"} pt={5}>
+                    <Wrap   pt={5}>
                         <Link href='/about'>
                             <Button w={250} color='white' bg='gray.700' _hover={{bg:'gray.600'}}>
                             Sobre
@@ -47,7 +51,7 @@ const Header = () => {
                         </Link>
                     </Wrap>
 
-                    <Wrap w={"100%"} pt={5}>
+                    <Wrap  pt={5}>
                         <Link href='/portfolio'>
                             <Button color='white' w={250} bg='gray.700' _hover={{bg:'gray.600'}}>
                             Portfolio
@@ -56,7 +60,7 @@ const Header = () => {
                     </Wrap>
 
 
-                </Container>
+                </Center>
             </Grid>
 
     );
