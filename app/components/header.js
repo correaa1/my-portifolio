@@ -33,7 +33,7 @@ const Header = () => {
 
                 <Container w={"100%"}>
                     <Wrap w={"100%"} pt={5}>
-                        <Link href='/home'> <Button w={250} colorScheme="gray">
+                        <Link href='/pages'> <Button w={250} colorScheme="gray">
                             Inicio
                         </Button>
                         </Link>

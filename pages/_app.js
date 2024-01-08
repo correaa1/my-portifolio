@@ -13,10 +13,8 @@ function MyApp({ Component, pageProps }) {
     return (
         <ChakraProvider theme={theme}>
             <CSSReset />
-            {/* Adicione estilos globais, se necessário */}
             <Global
                 styles={css`
-          /* Adicione estilos globais aqui se necessário */
         `}
             />
             <Component {...pageProps} />
