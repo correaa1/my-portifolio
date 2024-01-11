@@ -19,6 +19,7 @@ import {
 import Link from "next/link";
 import PageTransition from "@/app/components/pageTransition";
 import {FaGithub, FaLinkedin} from "react-icons/fa";
+import { IoMenu } from "react-icons/io5";
 
 const Header = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -30,6 +31,7 @@ const Header = () => {
 <>
 
         <Grid
+
             borderRadius={5}
             border='2px solid #36455c'
             position="sticky"
@@ -37,9 +39,10 @@ const Header = () => {
             left="0"
             zIndex="999"
             minH={'100vh'}
-            maxH={'100vh'}
+            maxH={'auto'}
+
             px={10}
-            w={{base:'93.75em', md:'block', }}
+            w={{ md:'20%',lg:'sm' }}
             display={{base:'none',md:'none',lg:'block'}}
             bg='gray.800'
         >
@@ -85,8 +88,8 @@ const Header = () => {
             </Grid>
 
     {isSmallerThanMd && (
-        <Button onClick={onOpen} position="fixed" top="5" left="5">
-            Acessar Menu
+        <Button m={10} onClick={onOpen} position="fixed" top="5" left="5">
+            <IoMenu size='lg' />
         </Button>
     )}
 
@@ -99,7 +102,7 @@ const Header = () => {
     >
         <DrawerOverlay />
         <DrawerContent minH='250vh'    maxW='lg'>
-            <DrawerCloseButton p={5 } size='2xl' w={50} bg='gray.500' _hover={{ bg: 'red.400' }}/>
+            <DrawerCloseButton p={5 } size='2xl' w={50} bg='gray.500' _hover={{ bg: 'gray.500' }}/>
             <DrawerHeader
                 fontSize='4xl'
                 px={10}

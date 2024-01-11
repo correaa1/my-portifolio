@@ -32,19 +32,19 @@ const About = () => {
     return (
 
             <Flex   flexDirection={{base:'column', md:'row'}}>
-            <Header />
+              <Header />
                 <PageTransition>
-            <Flex minH={'100vh'}   flexDirection='column' ps={20} w={1500} >
-                        <Text   fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}  p={10} >
+            <Flex minH={'100vh'}   flexDirection='column' p={20} w={1500} >
+                        <Text   fontSize={{ base: '4xl', md: '3xl', lg: '2xl' }}  p={10} >
                     Sobre mim
                         </Text>
                 < Flex flexDirection='row'   >
                     <Image rounded={10} h={350} w={450} src='/my.jpg' />
                     <Grid>
-                        <Text  fontSize={{ base: '4xl', md: 'lg', lg: 'lg' }}  p={10} >
+                        <Text  fontSize={{ base: '4xl', md: '3xl', lg: 'lg' }}  p={10} >
                           Meu nome é Bruno Correa, gosto muito de tecnologia e busco sempre estar aprendendo e inovando cada vez mais.
                         </Text>
-                        <Text  fontSize={{ base: '4xl', md: 'lg', lg: 'lg' }} p={10}>
+                        <Text  fontSize={{ base: '4xl', md: '3xl', lg: 'lg' }} p={10}>
                          Apaixonado pelo ecossistema React/Next.js e venho buscando trabalhar com essas tecnologias frequentemente
                         </Text>
                      </Grid>
@@ -52,14 +52,15 @@ const About = () => {
              <Center>
                  <Tabs  m={20}>
                   <TabList>
-                     <Tab fontSize={{ base: '4xl', md: 'lg', lg: 'lg' }}>Download curriculo </Tab>
-                      <Tab fontSize={{ base: '4xl', md: 'lg', lg: 'lg' }}>Gradução</Tab>
-                      <Tab fontSize={{ base: '4xl', md: 'lg', lg: 'lg' }}>Certificados</Tab>
+                     <Tab fontSize={{ base: '4xl', md: '3xl', lg: 'lg' }}>Download curriculo </Tab>
+                      <Tab fontSize={{ base: '4xl', md: '3xl', lg: 'lg' }}>Gradução</Tab>
+                      <Tab fontSize={{ base: '4xl', md: '3xl', lg: 'lg' }}>Certificados</Tab>
                   </TabList>
 
                     <TabPanels >
-                        <TabPanel>
-                            <Button fontSize={{ base: '4xl', md: 'lg', lg: 'lg' }} color='white' bg='gray.700' _hover={{bg:'gray.600'}}
+                        <TabPanel display='flex' flexDirection='column' alignItems='center'>
+                            <Button w={{base:'50vh', md:'30vh',lg:'20vh',}} h={{base:'10vh', md:'10vh',lg:'5vh',}}
+                                    wfontSize={{ base: '4xl', md: '3xl', lg: 'lg' }} color='white' bg='gray.700' _hover={{bg:'gray.600'}}
                                     onClick={() => handleDownload('/Curriculo2023Att.pdf', 'Curriculo2023Att.pdf')} >
                                 Currículo pdf
                             </Button>
@@ -67,20 +68,27 @@ const About = () => {
                         <TabPanel>
                             <Text fontSize={{ base: '4xl', md: 'lg', lg: 'lg' }}>Curso de sistemas de informação Completo</Text>
                         </TabPanel>
-                        <TabPanel display='flex' flexDirection='column'>
-                            <Button fontSize={{ base: '4xl', md: 'lg', lg: 'lg' }} color='white' bg='gray.700' _hover={{bg:'gray.600'}}
+                        <TabPanel display='flex' flexDirection='column' alignItems='center'>
+                            <Button
+                                w={{base:'50vh', md:'30vh',lg:'30vh',}}
+                                fontSize={{ base: '4xl', md: 'lg', lg: 'lg' }} color='white' bg='gray.700' _hover={{bg:'gray.600'}}
                                     onClick={() => handleDownload('/certificadoSql.pdf', 'certificadoSql.pdf')} >
                                  Banco de dados e SQL
                             </Button>
-                            <Button fontSize={{ base: '4xl', md: 'lg', lg: 'lg' }} mt={5} color='white' bg='gray.700' _hover={{bg:'gray.600'}}
+                            <Button
+                                w={{base:'50vh', md:'30vh',lg:'30vh',}}
+                                fontSize={{ base: '4xl', md: 'lg', lg: 'lg' }} mt={5} color='white' bg='gray.700' _hover={{bg:'gray.600'}}
                                     onClick={() => handleDownload('/reactNative.pdf', 'reactNative.pdf')} >
                                 React Native
                             </Button>
-                            <Button fontSize={{ base: '4xl', md: 'lg', lg: 'lg' }} mt={5} color='white' bg='gray.700' _hover={{bg:'gray.600'}}
+                            <Button
+                                w={{base:'50vh', md:'30vh',lg:'30vh',}}
+                                fontSize={{ base: '4xl', md: 'lg', lg: 'lg' }} mt={5} color='white' bg='gray.700' _hover={{bg:'gray.600'}}
                                     onClick={() => handleDownload('/Node-Ts-Mongodb.pdf', 'Node-Ts-Mongodb.pdf')} >
                               Nodejs | Typescript | Mongo
                             </Button>
-                            <Button fontSize={{ base: '4xl', md: 'lg', lg: 'lg' }}   mt={5} color='white' bg='gray.700' _hover={{bg:'gray.600'}}
+                            <Button  w={{base:'50vh', md:'30vh',lg:'30vh',}}
+                                     fontSize={{ base: '4xl', md: 'lg', lg: 'lg' }}   mt={5} color='white' bg='gray.700' _hover={{bg:'gray.600'}}
                                     onClick={() => handleDownload('/reactNative-Ts.pdf', 'reactNative-Ts.pdf')} >
                                 React Native e Typescript
                             </Button>
@@ -100,7 +108,7 @@ const About = () => {
                             Serviços que ofereço
                         </Text>
                     </Box>
-                        <Wrap m={20}>
+                        <Wrap m={10}>
                             <Box display='flex' justifyContent='center' alignItems='center' m={5} w={350} h={150}
                                  bg='gray.800' borderRadius="md"
                                  boxShadow="md">
