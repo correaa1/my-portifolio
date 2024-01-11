@@ -8,6 +8,7 @@ const theme = extendTheme({
         global: {
             body: {
                 fontFamily:'Montserrat, sans-serif',
+                bg:'#131325',
                 color: 'white',
             },
 

@@ -34,7 +34,7 @@ const About = () => {
             <Flex   flexDirection={{base:'column', md:'row'}}>
             <Header />
                 <PageTransition>
-            <Flex minH={'100vh'}  bg='#131325' flexDirection='column' ps={20} w={1500} >
+            <Flex minH={'100vh'}   flexDirection='column' ps={20} w={1500} >
                         <Text   fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}  p={10} >
                     Sobre mim
                         </Text>

@@ -41,6 +41,7 @@ const Header = () => {
             px={10}
             w={{base:'93.75em', md:'block', }}
             display={{base:'none',md:'none',lg:'block'}}
+            bg='gray.800'
         >
                 <Grid pt={20}  display='flex' flexDir='column' justifyContent='center' alignItems='center'  >
                     <Avatar size="2xl" name="Bruno Correa" src="/my.jpg" />
@@ -94,7 +95,7 @@ const Header = () => {
         onClose={onClose}
         isOpen={isOpen}
         isFullHeight={isSmallerThanMd}
-
+        bg='gray.800'
     >
         <DrawerOverlay />
         <DrawerContent minH='250vh'    maxW='lg'>
