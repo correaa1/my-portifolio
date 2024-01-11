@@ -105,3 +105,6 @@ a {
     color-scheme: dark;
   }
 }
+.drawer-header {
+  background-color: red;
+}

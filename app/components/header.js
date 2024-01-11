@@ -23,23 +23,24 @@ import {FaGithub, FaLinkedin} from "react-icons/fa";
 const Header = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
-    const [isSmallerThanMd] = useMediaQuery('(max-width: 48em)');
+    const [isSmallerThanMd] = useMediaQuery('(max-width: 75em)');
+
 
     return (
 <>
+
         <Grid
             borderRadius={5}
             border='2px solid #36455c'
-            position="relative"
+            position="sticky"
             top="0"
             left="0"
             zIndex="999"
-            h={920}
             minH={'100vh'}
-            maxH={{base:'35em', }}
+            maxH={'100vh'}
             px={10}
             w={{base:'93.75em', md:'block', }}
-            display={{base:'none',md:'block'}}
+            display={{base:'none',md:'none',lg:'block'}}
         >
                 <Grid pt={20}  display='flex' flexDir='column' justifyContent='center' alignItems='center'  >
                     <Avatar size="2xl" name="Bruno Correa" src="/my.jpg" />
@@ -93,29 +94,24 @@ const Header = () => {
         onClose={onClose}
         isOpen={isOpen}
         isFullHeight={isSmallerThanMd}
+
     >
         <DrawerOverlay />
-        <DrawerContent>
-            <DrawerCloseButton />
+        <DrawerContent minH='250vh'    maxW='lg'>
+            <DrawerCloseButton p={5 } size='2xl' w={50} bg='gray.500' _hover={{ bg: 'red.400' }}/>
             <DrawerHeader
-                borderRadius={5}
-                border='2px solid #36455c'
-                position="relative"
-                top="0"
-                left="0"
-                zIndex="999"
-                h={920}
+                fontSize='4xl'
                 px={10}
                  >Menu</DrawerHeader>
 
-                <Grid  display='flex' flexDir='column' justifyContent='center' alignItems='center'  >
-                    <Avatar size="2xl" name="Bruno Correa" src="/my.jpg" />
-                    <Box pt={10}>
+                <Grid m={20}   display='flex' flexDir='column' justifyContent='center' alignItems='center'  >
+                    <Avatar size="3xl" name="Bruno Correa" src="/my.jpg" />
+                    <Box pt={20}>
                         <Link href='https://github.com/correaa1' target="_blank" >
-                            <Icon m={3} w={50} h={50} as={FaGithub}/>
+                            <Icon m={3} w={100} h={100} as={FaGithub}/>
                         </Link>
                         <Link href='https://www.linkedin.com/in/devbrunocorrea1/' target="_blank">
-                            <Icon m={3} w={50} h={50} as={FaLinkedin }/>
+                            <Icon m={3} w={100} h={100} as={FaLinkedin }/>
                         </Link>
                     </Box>
                 </Grid>
@@ -123,7 +119,7 @@ const Header = () => {
                 <Center  flexDirection='column'>
                     <Wrap  pt={5}>
                         <Link href='/'>
-                            <Button   color='white' rounded='lg' bg='gray.700' _hover={{bg:'gray.600'}} onClick={onClose} >
+                            <Button fontSize='4xl'   color='white' p={7}  rounded='lg' w='sm'  bg='gray.600' _hover={{bg:'gray.500'}} onClick={onClose} >
                                 Inicio
                             </Button>
                         </Link>
@@ -131,7 +127,7 @@ const Header = () => {
 
                     <Wrap   pt={5}>
                         <Link href='/about'>
-                            <Button color='white' rounded='lg' bg='gray.700' _hover={{bg:'gray.600'}} onClick={onClose}>
+                            <Button fontSize='4xl' color='white' p={7} rounded='lg' w='sm'  bg='gray.600' _hover={{bg:'gray.500'}} onClick={onClose}>
                                 Sobre
                             </Button>
                         </Link>
@@ -139,7 +135,7 @@ const Header = () => {
 
                     <Wrap  pt={5}>
                         <Link href='/portfolio'>
-                            <Button color='white' rounded='lg'  bg='gray.700' _hover={{bg:'gray.600'}} onClick={onClose}>
+                            <Button fontSize='4xl' color='white' p={7}  rounded='lg' w='sm'  bg='gray.600' _hover={{bg:'gray.500'}} onClick={onClose}>
                                 Portfolio
                             </Button>
                         </Link>
@@ -152,6 +148,7 @@ const Header = () => {
             </DrawerBody>
         </DrawerContent>
     </Drawer>
+
 </>
     );
 };
