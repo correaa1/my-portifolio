@@ -5,7 +5,7 @@ const theme = extendTheme({
         global: {
             body: {
                 fontFamily:'Montserrat, sans-serif',
-                bg: 'gray.800', // ou qualquer cor que você deseje
+                bg: 'gray.800',
                 color: 'white',
             },
 

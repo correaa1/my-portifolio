@@ -35,7 +35,7 @@ const Portfolio = () => {
     return (
     <Flex  flexDirection={{base:'column', md:'row'}} >
 
-            <Header   />
+            <Header    />
 
     <PageTransition>
         <Flex   bg='#131325' pt={20} justifyItems='center' flexDirection='column' minW="93.75em" >

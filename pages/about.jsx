@@ -1,17 +1,28 @@
 import React from 'react';
 import Header from "@/app/components/header";
-import {Box, Container, Flex, Grid, Text, Image, GridItem, Wrap, Button, Center} from "@chakra-ui/react";
+import {
+    Box,
+    Flex,
+    Grid,
+    Text,
+    Image,
+    Wrap,
+    Button,
+    Tabs,
+    Tab,
+    TabList,
+    TabPanels,
+    TabPanel,
+    Center
+} from "@chakra-ui/react";
 import PageTransition from "@/app/components/pageTransition";
-import { Icon } from '@chakra-ui/react'
-import {FaGithub, FaLinkedin} from "react-icons/fa";
+
 import { motion } from 'framer-motion';
 const About = () => {
-    const handleDownload = () => {
-        const pdfPath = '/Curriculo2023Att.pdf';
-
+    const handleDownload = (pdfPath, fileName) => {
         const a = document.createElement('a');
         a.href = pdfPath;
-        a.download = 'Curriculo2023Att.pdf';
+        a.download = fileName;
 
         document.body.appendChild(a);
         a.click();
@@ -20,15 +31,15 @@ const About = () => {
     };
     return (
 
-            <Flex>
-            <Header/>
+            <Flex  flexDirection={{base:'column', md:'row'}}>
+            <Header />
                 <PageTransition>
-            <Flex bg='#131325' flexDirection='column' ps={20} w={1500} h={1200}>
+            <Flex minH={'100vh'}  bg='#131325' flexDirection='column' ps={20} w={1500} >
                         <Text   fontSize='4xl'  p={10} >
                     Sobre mim
                         </Text>
                 < Flex flexDirection='row'   >
-                    <Image h={350} w={550} src='/my.jpg' />
+                    <Image rounded={10} h={350} w={450} src='/my.jpg' />
                     <Grid>
                         <Text  fontSize='lg'  p={10} >
                           Meu nome é Bruno Correa, gosto muito de tecnologia e busco sempre estar aprendendo e inovando cada vez mais.
@@ -38,11 +49,46 @@ const About = () => {
                         </Text>
                      </Grid>
                 </Flex>
-                <Center  m={20}>
-                    <Button color='white' bg='gray.700' _hover={{bg:'gray.600'}} onClick={handleDownload} >
-                    Download curriculo
-                </Button>
-                </Center>
+             <Center>
+                 <Tabs  m={20}>
+                  <TabList>
+                     <Tab>Download curriculo </Tab>
+                      <Tab>Gradução</Tab>
+                      <Tab>Certificados</Tab>
+                  </TabList>
+
+                    <TabPanels>
+                        <TabPanel>
+                            <Button color='white' bg='gray.700' _hover={{bg:'gray.600'}}
+                                    onClick={() => handleDownload('/Curriculo2023Att.pdf', 'Curriculo2023Att.pdf')} >
+                                Currículo pdf
+                            </Button>
+                        </TabPanel>
+                        <TabPanel>
+                            <p>Curso de sistemas de informação Completo</p>
+                        </TabPanel>
+                        <TabPanel display='flex' flexDirection='column'>
+                            <Button color='white' bg='gray.700' _hover={{bg:'gray.600'}}
+                                    onClick={() => handleDownload('/certificadoSql.pdf', 'certificadoSql.pdf')} >
+                                 Banco de dados e SQL
+                            </Button>
+                            <Button mt={5} color='white' bg='gray.700' _hover={{bg:'gray.600'}}
+                                    onClick={() => handleDownload('/reactNative.pdf', 'reactNative.pdf')} >
+                                React Native
+                            </Button>
+                            <Button mt={5} color='white' bg='gray.700' _hover={{bg:'gray.600'}}
+                                    onClick={() => handleDownload('/Node-Ts-Mongodb.pdf', 'Node-Ts-Mongodb.pdf')} >
+                              Nodejs | Typescript | Mongo
+                            </Button>
+                            <Button mt={5} color='white' bg='gray.700' _hover={{bg:'gray.600'}}
+                                    onClick={() => handleDownload('/reactNative-Ts.pdf', 'reactNative-Ts.pdf')} >
+                                React Native e Typescript
+                            </Button>
+                        </TabPanel>
+
+                    </TabPanels>
+                </Tabs>
+             </Center>
                     <motion.div
                         initial={{opacity: 0, y: 20}}
                         animate={{opacity: 1, y: 0}}
@@ -54,7 +100,7 @@ const About = () => {
                             Serviços que ofereço
                         </Text>
                     </Box>
-                        <Wrap>
+                        <Wrap m={20}>
                             <Box display='flex' justifyContent='center' alignItems='center' m={5} w={350} h={150}
                                  bg='gray.800' borderRadius="md"
                                  boxShadow="md">

@@ -9,7 +9,7 @@ function IndexPage() {
     return (
          <Flex >
           <Header/>
-              <Box  display={{base:'none',md: "block", }}   >
+              <Box     >
                 <Background  />
               </Box>
 

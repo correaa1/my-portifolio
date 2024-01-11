@@ -27,23 +27,23 @@ const Background = () => {
             />
 
             <Text
-                position={[0, 1, 0]}
+                position={[0, 2, 0]}
                 scale={[1, 1, 1]}
                 color="white"
                 anchorX="center"
                 anchorY="middle"
-                fontSize={0.5}
+                fontSize={0.3}
             >
                 Olá meu nome é Bruno Correa Dos Santos
             </Text>
 
             <Text
-                position={[0, 0, 0]}
+                position={[0, 1, 0]}
                 scale={[1, 1, 1]}
                 color="white"
                 anchorX="center"
                 anchorY="middle"
-                fontSize={0.5}
+                fontSize={0.3}
             >
                 e sou desenvolvedor web freelancer
             </Text>
